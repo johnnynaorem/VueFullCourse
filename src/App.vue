@@ -1,17 +1,18 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>Checked Names: {{ checkNames }}</div>
+  <input type="checkbox" id="john" v-model="checkNames" value="John" />
+  <label for="john">John</label>
+  <input type="checkbox" id="johnny" v-model="checkNames" value="Johnny" />
+  <label for="johnny">Johnny</label>
+  <input type="checkbox" id="rishi" v-model="checkNames" value="rishi" />
+  <label for="rishi">Rishi</label>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import { ref } from 'vue';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+const checkNames = ref([]);
+
 </script>
 
 <style>
